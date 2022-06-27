@@ -1,0 +1,6 @@
+{
+    "x": ["test/"],
+    "requires": { 
+      "platform": [  "OpenSSL::+SSL", "OpenSSL::+Crypto" ]
+    }
+}
