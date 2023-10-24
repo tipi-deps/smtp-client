@@ -1,6 +1,21 @@
 {
-    "x": ["test/"],
-    "requires": { 
-      "platform": [  "OpenSSL::+SSL", "OpenSSL::+Crypto" ]
+  "x": [
+    "test/"
+  ],
+  "requires": {
+    "nxxm/boringssl": {
+      "@": ":358175c062c3a3964d4734df4b122e6af851def0",
+      "u": true,
+      "packages": [
+        "OpenSSL",
+        "BoringSSL"
+      ],
+      "targets": [
+        "OpenSSL::SSL",
+        "OpenSSL::Crypto",
+        "BoringSSL::decrepit"
+      ],
+      "find_mode": " "
     }
+  }
 }
