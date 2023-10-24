@@ -1843,7 +1843,7 @@ smtp_tls_init(struct smtp *const smtp,
       SSL_free(smtp->tls);
       return -1;
     }
-    if(X509_check_host(X509_cert_peer, server, 0, 0, NULL) != 1){
+    if(X509_check_host(X509_cert_peer, server, strlen(server), 0, NULL) != 1){
       SSL_CTX_free(smtp->tls_ctx);
       SSL_free(smtp->tls);
       return -1;
